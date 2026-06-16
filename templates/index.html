@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surveillance // Input Monitor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="terminal-container">
+        <header>
+            <div class="rec-indicator"></div>
+            <h1>INPUT CAPTURE STREAM</h1>
+            <div class="timer" id="sys-time">00:00:00</div>
+        </header>
+
+        <section class="log-info">
+            <p>STATUS: <span class="active">LISTENER ACTIVE</span></p>
+            <p>POLLING FREQUENCY: 1000ms</p>
+        </section>
+
+        <div class="capture-window" id="log-display">
+            Initializing capture engine...
+        </div>
+
+        <div class="action-bar">
+            <button id="clear-btn">PURGE SESSION LOGS</button>
+        </div>
+
+        <footer>
+            <p>STATION_ALPHA // v{{ version }} // EDUCATIONAL_USE_ONLY</p>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
